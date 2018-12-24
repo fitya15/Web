@@ -31,12 +31,21 @@ if(isset($_POST['register'])){
     {
         array_push($errors,"Password did not match");
     }
-    
+
+    $query="SELECT * FROM users WHERE username='$username'";
+        $result=mysqli_query($db,$query);
+              //query variable  
+              if(mysqli_num_rows($result)==1){
+                array_push($errors,"Username Already exist");
+              }
+
+              
 
     //if there are no error save to database  
     if(count($errors) == 0)
     {
-        $password=md5($password_1);
+        //$password=md5($password_1);
+        $password=$password_1;
         //syntax is $sql="INSERT INTO _tablename_ (dbname,dbname,dbname)
         // VALUES('$variabledb','$variabledb','$variabledb')";
         $sql="INSERT INTO users (username,email,password) 
@@ -71,7 +80,7 @@ if(isset($_POST['login'])){
     if(count($errors) == 0)
     {
 
-        $password=md5($password);
+        //$password=md5($password);
         $query="SELECT * FROM users WHERE username='$username' AND password='$password'";
         $result=mysqli_query($db,$query);
               //query variable
