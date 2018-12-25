@@ -48,20 +48,31 @@ form, .content{
     border:1px solid gray;
 }
 
-.btn{
+.input-group button{
     padding:10px;
     font-size: 15px;
     color: white;
-    background: #5F9EA0;
+    background:#5F9EA0;
     border:none;
     border-radius:5px;
 }
 
-.btnsmall{
-    padding:15px;
+
+.btn{
+    padding:10px;
     font-size: 15px;
     color: white;
-    background: #5F9EA0;
+    background:#5F9EA0;
+    border:none;
+    border-radius:5px;
+}
+
+
+#add{
+    padding:10px;
+    font-size: 15px;
+    color: white;
+    background:tan;
     border:none;
     border-radius:5px;
 }

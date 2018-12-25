@@ -7,6 +7,17 @@
     
 </head>
 <body>
+    <?php if($_SESSION['success']!="You're Logged In"):?>
+            <div class="error success">
+                <h3>
+                    <?php
+                    unset($_SESSION['success']);
+                    header('location: login.php');
+                    ?>
+                </h3>
+            </div>
+    <?php endif ?>
+
     <div class="header">
         <h2>Home Page</h2>
     </div>
@@ -40,12 +51,9 @@
 
 </form>
 
-<div id="hobby">
-  
-  <button class="btnsmall" id="remove">x</button>
-</div>
+<div class="input-group" id="hobby"></div>
 
-<button class="btn" id="add">Add hobby</button>
+<button id="add">Add hobby</button>
     
 
     <script src="script.js"></script> 
