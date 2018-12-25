@@ -57,6 +57,16 @@ form, .content{
     border-radius:5px;
 }
 
+.btnsmall{
+    padding:15px;
+    font-size: 15px;
+    color: white;
+    background: #5F9EA0;
+    border:none;
+    border-radius:5px;
+}
+
+
 .error{
     width:92%;
     margin:0px auto;

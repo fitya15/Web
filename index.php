@@ -4,6 +4,7 @@
 <head>
     <title>User Registration</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    
 </head>
 <body>
     <div class="header">
@@ -39,6 +40,14 @@
 
 </form>
 
+<div id="hobby">
+  
+  <button class="btnsmall" id="remove">x</button>
+</div>
+
+<button class="btn" id="add">Add hobby</button>
     
+
+    <script src="script.js"></script> 
 </body>
 </html>
